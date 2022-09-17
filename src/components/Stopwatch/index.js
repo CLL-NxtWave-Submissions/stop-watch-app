@@ -105,18 +105,21 @@ export default class StopWatch extends Component {
               <button
                 type="button"
                 className="timer-control-button start-button"
+                onClick={this.onStart}
               >
                 Start
               </button>
               <button
                 type="button"
                 className="timer-control-button stop-button"
+                onClick={this.onStop}
               >
                 Stop
               </button>
               <button
                 type="button"
                 className="timer-control-button reset-button"
+                onClick={this.onReset}
               >
                 Reset
               </button>

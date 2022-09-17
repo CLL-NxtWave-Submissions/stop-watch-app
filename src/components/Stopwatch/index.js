@@ -80,6 +80,11 @@ export default class StopWatch extends Component {
   render() {
     const {timerMinutes, timerSeconds} = this.state
 
+    const timerMinutesString =
+      timerMinutes < 10 ? '0'.concat(timerMinutes) : timerMinutes
+    const timerSecondsString =
+      timerSeconds < 10 ? '0'.concat(timerSeconds) : timerSeconds
+
     return (
       <div className="stop-watch-bg-container">
         <div className="stop-watch-content-container">
@@ -94,7 +99,7 @@ export default class StopWatch extends Component {
               <p className="timer-text">Timer</p>
             </div>
 
-            <p className="minutes-seconds-counter">{`${timerMinutes}:${timerSeconds}`}</p>
+            <p className="minutes-seconds-counter">{`${timerMinutesString}:${timerSecondsString}`}</p>
 
             <div className="timer-controls-container">
               <button

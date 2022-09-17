@@ -32,27 +32,23 @@ export default class StopWatch extends Component {
   }
 
   onStart = () => {
-    this.setState(previousStopWatchState => {
-      let {timerIntervalId} = previousStopWatchState
+    const {timerIntervalId} = this.state
+    let intervalId
 
-      if (timerIntervalId === null) {
-        timerIntervalId = setInterval(this.updateTimer, 1000)
-      }
-
-      return {
-        timerIntervalId,
-      }
-    })
+    if (timerIntervalId === null) {
+      intervalId = setInterval(this.updateTimer, 1000)
+      this.setState({
+        timerIntervalId: intervalId,
+      })
+    }
   }
 
   onStop = () => {
     this.setState(previousStopWatchState => {
       let {timerIntervalId} = previousStopWatchState
 
-      if (timerIntervalId !== null) {
-        clearInterval(timerIntervalId)
-        timerIntervalId = null
-      }
+      clearInterval(timerIntervalId)
+      timerIntervalId = null
 
       return {
         timerIntervalId,
@@ -64,10 +60,8 @@ export default class StopWatch extends Component {
     this.setState(previousStopWatchState => {
       let {timerIntervalId} = previousStopWatchState
 
-      if (timerIntervalId !== null) {
-        clearInterval(timerIntervalId)
-        timerIntervalId = null
-      }
+      clearInterval(timerIntervalId)
+      timerIntervalId = null
 
       return {
         timerMinutes: initialTimerSetting.initialMinutes,
@@ -99,7 +93,7 @@ export default class StopWatch extends Component {
               <p className="timer-text">Timer</p>
             </div>
 
-            <p className="minutes-seconds-counter">{`${timerMinutesString}:${timerSecondsString}`}</p>
+            <h1 className="minutes-seconds-counter">{`${timerMinutesString}:${timerSecondsString}`}</h1>
 
             <div className="timer-controls-container">
               <button

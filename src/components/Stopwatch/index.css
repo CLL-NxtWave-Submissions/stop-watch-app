@@ -1,1 +1,96 @@
-/* Write CSS here */
+.stop-watch-bg-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/stopwatch-sm-bg.png');
+  background-size: cover;
+  height: 100vh;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.stop-watch-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  background: inherit;
+  font-family: 'Roboto';
+}
+
+.stop-watch-header {
+  color: #333333;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.stop-watch-container {
+  background-color: #ffffff;
+  border-radius: 0.6rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-text-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.timer-img {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+.timer-text {
+  color: #333333;
+  font-size: 1.5rem;
+}
+
+.minutes-seconds-counter {
+  color: #333333;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.timer-controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.timer-control-button {
+  color: #ffffff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.start-button {
+  background-color: #1db05f;
+}
+
+.stop-button {
+  background-color: #ef0d36;
+}
+
+.reset-button {
+  background-color: #eaa800;
+}
+
+@media (min-width: 768px) {
+  .stop-watch-bg-container {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/stopwatch-lg-bg.png');
+  }
+}

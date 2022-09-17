@@ -33,6 +33,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 0.5rem 0.5rem #333333;
 }
 
 .timer-text-container {
@@ -65,6 +66,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .timer-control-button {
